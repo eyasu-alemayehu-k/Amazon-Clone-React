@@ -1,0 +1,87 @@
+.home__image {
+  width: 100%;
+  /* z-index: -1; */
+  margin-bottom: -140px;
+  /* -webkit-mask-image: linear-gradient(180deg, #cbcbcb, transparent); */
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 8) 80%,transparent);
+  position: relative;
+  left: 100%;
+  transition: all cubic-bezier(1, 0, 0, 1);
+  animation: ImagePosition 2s cubic-bezier(0.075, 0.82, 0.165, 1) 1s  1 forwards normal  ;
+}
+
+@keyframes ImagePosition {
+  0% {
+    right: 0;
+  }
+  100% {
+    left: 0;     
+  }
+}
+
+.home__row {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(400px, 1fr) );
+  gap: 1em;
+  z-index: 1;
+  width: 100%;
+  overflow: hidden;
+  padding: 0 2em;
+  margin-top: 1em;
+}
+
+.home {
+  background-color: #cbcbcb;
+  min-width: 100%;
+  padding-bottom: 2em;
+}
+
+.home__card__row {
+  width: 90vw;
+  margin: auto;
+}
+
+.home__card {
+    /* background: #5f5e5e; */
+    padding: 2em 0;
+}
+
+.home__btn {
+  position: absolute;
+  color: #cbcbcb;
+  top: 15vw;
+  z-index: 500;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5em;
+  padding: 2em .5em;
+  mix-blend-mode: difference;
+  transition: all .5s;
+}
+
+.home__btn--next {
+  left: 10px;
+}
+
+.home__btn--previous {
+  right: 10px;
+}
+
+.home__btn:hover {
+  border: 1px solid #cbcbcb;
+  border-radius: .5em;
+  background-color: #cbcbcb62;
+}
+@media screen and (max-width:500px){
+  .home__row {
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    padding: 0 1em;
+  }
+}
+
+@media (min-width:500px) and (max-width:900px){
+  .home__row {
+    grid-template-columns: repeat( auto-fit, minmax(280px, 1fr) );
+    padding: 0 1em;
+  }
+}

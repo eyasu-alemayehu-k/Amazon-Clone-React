@@ -1,0 +1,80 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login__image img {
+    width: 100px;
+    object-fit: contain;
+    height: 80px;
+}
+
+.login__container {
+    width: 360px;
+    border: 1px solid #ddd;
+    border-radius: .6em;
+    padding: 1em 2em;
+}
+
+.login__title p{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1.8em;
+    padding-bottom: .2em;
+}
+
+.login__container input,
+.login__container button {
+    width: 100%;
+}
+
+.login__input {
+    margin-bottom: 1em;
+}
+
+.login__input input {
+    padding: .4em;
+    margin-top: .2em;
+    border: 1px solid #a6a6a6;
+    border-top-color: #949494;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(255,255,255,.5), 0 1px 0 rgba(0,0,0,.07) inset;
+    outline: 0;
+}
+
+.login__input input:focus {
+    border: 1px solid #777;
+    border-top-color: #777;
+    box-shadow: 0 0 0 3px rgba(82, 222, 217, 0.5), 0 0 25px 1px rgba(82, 222, 217, 0.112) inset;
+}
+
+.login__input > p {
+    margin-top: .5em;
+}
+
+.login__container button {
+    padding: .4em;
+    background: #f1d60e;
+    border-radius: .5em;
+    color: #111;
+    border: none;
+}
+
+.login__container button:hover {
+    cursor: pointer;
+}
+
+.login__container .btn--create_account {
+    background: transparent;
+    border: 1px solid #ddd;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    box-shadow: 0 0 10px 0 rgba(174, 174, 174, 0.193), 0 1px 0 rgba(0,0,0,.07) inset;
+}
+
+.login__conditions {
+    margin-top: 1em;
+    font-size: .7em;
+}
