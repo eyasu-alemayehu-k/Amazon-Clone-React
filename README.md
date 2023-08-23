@@ -1,17 +1,16 @@
-## Amazon Website Clone
+# Amazon Website Clone
 
-# Frontend
+## Frontend
 - ReactJs
 
-# Backend
+## Backend
 - NodeJs 
   
-# includes
+## includes
 - ExpressJs
 - Firebase authentication and firestore
 - Stripe payment
 
-Link for website : https://sparkling-alpaca-054c5e.netlify.app/
 
 * Home page
 ![Website Review](./amazon-1.png)
