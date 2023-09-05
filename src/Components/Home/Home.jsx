@@ -24,22 +24,26 @@ function Home() {
   const handleChange = (option) => {
     console.clear();
     if (option === 1) {
+      clearTimeout(timer);
       currentIndex < imageLink.length - 1
         ? setCurrentIndex(currentIndex + 1)
         : setCurrentIndex(0);
     } else {
+      clearTimeout(timer);
       currentIndex > 0
         ? setCurrentIndex(currentIndex - 1)
         : setCurrentIndex(imageLink.length - 1);
     }
   };
 
-  const handleChangeOnTime = () =>
+    const handleChangeOnTime = () =>
     currentIndex < imageLink.length - 1
       ? setCurrentIndex(currentIndex + 1)
       : setCurrentIndex(0);
 
-  setTimeout(() => handleChangeOnTime(), 25000);
+    const timer = setTimeout(() => handleChangeOnTime(), 25000);
+    clearTimeout(timer);
+
 
   const settings = {
     dots: true,
@@ -76,7 +80,7 @@ function Home() {
     ],
   };
   return (
-    <div className="home" id="home">
+    <section className="home" id="home">
       <div className="home__container">
         <button
           className="home__btn home__btn--next"
@@ -127,7 +131,7 @@ function Home() {
           })}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

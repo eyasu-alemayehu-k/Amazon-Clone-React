@@ -12,7 +12,7 @@
 .header__logo {
   width: 100px;
   object-fit: contain;
-  margin: 0  clamp(20px, 2vw, 40px);;
+  margin: 0  clamp(10px, 2vw, 40px);
   margin-top: 10px;
 }
 
@@ -64,12 +64,10 @@
 }
 
 .header__optionLineOne {
-    font-size: clamp(2px, 1.2vw, 12px);
     white-space: nowrap; 
 }
 
 .header__optionLineTwo {
-  font-size: clamp(4px, 1.5vw, 17px);
   font-weight: 800;
   white-space: nowrap; 
 }
@@ -79,7 +77,6 @@
   flex-direction: column;
   align-items: center;
   color: white;
-  font-size: clamp(4px, 1.5vw, 15px);
 }
 
 .header__basketCount {
@@ -91,10 +88,84 @@
 
 .header__shoppingIcon {
   margin-top: -5px;
+  width: 100%;
 }
 
 .header__link {
   text-decoration: none;
 }
 
+.hidden,
+.mobile_screen {
+  display: none;
+}
 
+.dropdown__toggle {
+  display: none;
+}
+.dropdown__toggle span{
+  color: white;
+}
+
+.dropdown__toggle span:hover{
+  color: #e4a552;
+  cursor: pointer;
+}
+
+.large_screen {
+  display: flex;
+  gap: 20px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .dropdown__toggle {
+    display: block;
+  }
+  .large_screen {
+    display: none;
+  }
+  .header__logo {
+    width: 80px;
+  }
+  .header__searchInput {
+    height: 32px;
+    padding-left: 10px;
+    border: none;
+    width: 80%;
+    font-size: .9em;
+  }
+  .header__searchIcon {
+    width:32px !important;
+    height:32px !important;
+  }
+  .dropdown__menu {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: #131921;
+    z-index: 100;
+    overflow: hidden;
+    top: 60px;
+    right: 10px;
+    animation: slideUp .6s ease .6s 1 both ;
+  }
+
+  .dropdown__menu-hidden {
+    display: none;
+  }
+
+}
+
+
+@keyframes slideUp {
+  from {
+    transform: translateY(-100%), translateX(10px);
+  }
+  to {
+    transform: translateY(0%), translateX(10px);
+  }
+}

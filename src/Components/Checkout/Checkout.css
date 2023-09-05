@@ -37,3 +37,21 @@
 .checkout__products {
   width: 50vw;
 }
+
+@media screen and (max-width: 600px) {
+  .checkout_container { 
+    flex-direction: column;
+  }
+  .checkout__products {
+    width: 100%;
+  }
+
+  .checkout__ad{
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .checkout__left {
+    display: block;
+  }
+}

@@ -17,3 +17,14 @@
     text-align: right;
   }
   
+
+  @media screen and (max-width: 600px) { 
+    .order .order__id{
+      font-size: .8em;
+    }
+
+    .order__time {
+      margin-top: 10px;
+      font-size: .9em;
+    }
+  }

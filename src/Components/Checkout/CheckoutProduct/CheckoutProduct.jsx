@@ -22,12 +22,15 @@ function CheckoutProduct({
       />
       <div className="checkoutProduct__info">
         <p>{title}</p>
-        <p className="checkoutProduct__price">
-          <strong>${price}</strong>
-        </p>
-        <div className="checkoutProduct__rating">
-          <span className="rating">{Rating(rating)}</span>
+        <div className="checkoutProduct__paymentContainer">
+          <p className="checkoutProduct__price">
+            <strong>${price}</strong>
+          </p>
+          <div className="checkoutProduct__rating">
+            <span className="rating">{Rating(rating)}</span>
+          </div>
         </div>
+
         {!hideButton && (
           <Button
             className="checkoutProduct__button"

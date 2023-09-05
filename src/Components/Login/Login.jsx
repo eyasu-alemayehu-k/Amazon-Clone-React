@@ -55,12 +55,14 @@ function Login() {
               type="email"
               id="email"
               value={email}
+              required
               onChange={(e) => setEmail(e.target.value)}
             />
             <p htmlFor="password">Password</p>
             <input
               type="password"
               id="password"
+              required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
